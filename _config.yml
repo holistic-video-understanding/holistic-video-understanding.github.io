@@ -12,3 +12,4 @@ github_username:"holistic-video-understanding"
 
 # Build settings
 markdown: kramdown
+theme: minima
