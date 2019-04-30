@@ -2,8 +2,7 @@
 future: true
 title: Holistic Video Understanding
 email: fayyaz@iai.uni-bonn.de
-description: >-
-  Holistic Video Understanding # this means to ignore newlines until "baseurl:"
+description: >Holistic Video Understanding # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://holistic-video-understanding.github.io" # the base hostname & protocol for your site
 twitter_username:""
