@@ -147,6 +147,14 @@ aside {
     }
 }
 
+// IMG
+IMG.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto }
+
 // Homepage Header
 
 header {
@@ -227,6 +235,7 @@ header {
     display: block;
     max-width: 650px;
     margin: 0 auto;
+    text-align: center;
     .portfolio-box-caption {
         color: white;
         opacity: 0;
