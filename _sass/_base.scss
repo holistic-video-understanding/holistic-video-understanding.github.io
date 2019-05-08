@@ -43,7 +43,7 @@ p {
 }
 
 .bg-primary {
-    background-color: $theme-primary;
+    background-color: rgba(0,0,0,0.08);
 }
 
 .bg-dark {
@@ -58,6 +58,10 @@ p {
 
 .text-faded {
     color: rgba(white, .7);
+}
+
+.text-dark {
+    color: rgba(black, 1);
 }
 
 section {
@@ -156,6 +160,13 @@ aside {
 IMG.img-responsive {
     display: block;
     max-width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto }
+
+IMG.img-logo {
+    display: block;
+    max-width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto }
