@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Holistic Video Understanding
-email: fayyaz@iai.uni-bonn.de
+email: fayyaz 'at' iai 'dot' uni-bonn 'dot' de
 description: >- # this means to ignore newlines until "baseurl:"
   Holistic Video Understanding
 baseurl: "" # the subpath of your site, e.g. /blog
