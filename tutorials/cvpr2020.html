@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Large Scale Holistic Video Understanding Tutorial</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../fontawesome/css/all.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+          heap.load("1625312160");
+    </script>
+
+</head>
+
+
+<body id="page-top">
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="../index.html">HVU</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+		
+				<li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#speakers">Speakers</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#program">Tutorial Program</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#organizers">Organizers</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+  <header style="background-image:url(http://cvpr2020.thecvf.com/sites/default/files/2019-05/iStock-477409274.jpg)">
+    <div class="header-content" style="color:white; background-color: rgba(0, 0, 0, 0.4);">
+        <div class="header-content-inner">
+        	
+            <h1>Large Scale Holistic Video Understanding Tutorial</h1>
+            <hr>
+            <h2">In Conjunction with CVPR 2020, Seattle, Washington, U.S.</h2>
+            <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
+            <a href="http://cvpr2020.thecvf.com/program/tutorials" target="_blank">
+            	<img src="http://cvpr2020.thecvf.com/sites/default/files/CVPR_Logo_Horz2_web.jpg" width=370 class="img-logo" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="text-dark" id="about">
+    <div class="container">
+    	<div class="row" style="padding-bottom: 50px">
+    		<div class="col-md-6">
+    			<p>Holistic Video Understanding is a joint project of the KU Leuven, University of Bonn, KIT, ETH, and the <a href="../index.html#team" target="_blank">HVU team</a>.</p>
+    		</div>
+    		<div class="col-md-6">
+    			<div class="row">
+		    		<div class="col-md-4 text-center">
+		    			<img src="../img/portfolio/KULeuven.png" class="img-logo" alt="">
+		    		</div>
+		    		<div class="col-md-4 text-center">
+		    			<img src="../img/portfolio/Bonn.png" class="img-logo" alt="">
+		    		</div>
+		    		<div class="col-md-4 text-center">
+		    			<img src="../img/portfolio/KIT.svg" class="img-logo" alt="">
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 text-center">
+		    			<img src="../img/portfolio/ETH.png" class="img-logo" alt="">
+		    		</div>
+		    	</div>
+    		</div>
+    	</div>
+        <div class="row">
+            <!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
+            <div class="col-md-6 text-center">
+                <h2 class="section-heading">ABOUT THE TUTORIAL</h2>
+                <hr class="light">
+                <p class="text-dark" align="justify">In the last years, we have seen a tremendous progress in the capabilities of computer systems to classify video clips taken from the Internet or to analyze human actions in videos. There are lots of works in video recognition field focusing on specific video understanding tasks, such as, action recognition, scene understanding, etc. There have been great achievements in such tasks, however, there has not been enough attention toward the holistic video understanding task as a problem to be tackled. Current systems are expert in some specific fields of the general video understanding problem. However, for real world applications, such as, analyzing multiple concepts of a video for video search engines and media monitoring systems or providing an appropriate definition of the surrounding environment of an humanoid robot, a combination of current state-of-the-art methods should be used. Therefore in this tutorial, we intend to put effort into introducing the holistic video understanding as a new challenge in the computer vision field. This challenge focuses on the recognition of scenes, objects, actions, attributes, and events in the real world and user-generated videos. We also aim to cover the most important aspects of video recognition and understanding in the tutorial course work.</p>
+                <!--<a href="#" class="btn btn-default btn-xl">Coming Soon</a>-->
+            </div>
+            <div class="col-md-6 text-center">
+                
+                <h2 class="section-heading">TOPICS</h2>
+                <hr class="light">
+                <ul class="text-dark" style="font-size: 20px" align="left">
+                <li>Holistic video recognition</li>
+                <li>Future prediction in videos</li>
+                <li>Large scale video understanding</li>
+				<li>Multiple category recognition in videos</li>
+				<li>Object and activity detection in videos</li>
+                <li>Weakly supervised learning from web videos</li>
+				<li>Learning visual representation from videos</li>
+                <li>Unsupervised and self-supervised learning with videos</li>
+                <li>3D/2D Deep Neural Networks for action and activity recognition</li>
+                </ul>
+                <!--<a href="#" class="btn btn-default btn-xl">Coming Soon</a>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray" id="speakers">
+    
+      <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">SPEAKERS</h2>
+                <hr class="primary">
+            </div>
+        </div>
+        
+        <div class="row no-gutter">
+            <div class="col-md-4" style="align-content: right;" id="S1">
+                <a href="http://www.cs.toronto.edu/~urtasun/" target="_blank" class="portfolio-box">
+                    <img src="img/portfolio/RaquelUrtasun.png" class="img-responsive" alt="">
+                    <br><p>Raquel Urtasun</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Raquel Urtasun
+                            </div>
+                            <div class="project-name">
+                                Co-Founder of the Vector Institute for AI<br>Canada Research Chair in Machine Learning and Computer Vision<br>NSERC EWR Steacie Fellow
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4" style="align-content: right;" id="S1">
+                <a href="" target="_blank" class="portfolio-box">
+                    <img src="" class="img-responsive" alt="">
+                    <br><p>Cordelia Schmid</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Cordelia Shmid
+                            </div>
+                            <div class="project-name">
+                                Research Director, INRIA/Google
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4" style="align-content: right;" id="S1">
+                <a href="" target="_blank" class="portfolio-box">
+                    <img src="" class="img-responsive" alt="">
+                    <br><p>Ivan Laptev</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Ivan Laptev
+                            </div>
+                            <div class="project-name">
+                                Senior Research Director, INRIA
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4" style="align-content: right;" id="S1">
+                <a href="" target="_blank" class="portfolio-box">
+                    <img src="" class="img-responsive" alt="">
+                    <br><p>Joao Carreira</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Joao Carreira
+                            </div>
+                            <div class="project-name">
+                                Research Scientist, Google DeepMind
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4" style="align-content: right;" id="S1">
+                <a href="" target="_blank" class="portfolio-box">
+                    <img src="" class="img-responsive" alt="">
+                    <br><p>Andreas Geiger</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Andreas Geiger
+                            </div>
+                            <div class="project-name">
+                                 University of Tuebingen/ MPI-IS
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4" style="align-content: right;" id="S1">
+                <a href="" target="_blank" class="portfolio-box">
+                    <img src="img/portfolio/CarlVondrick.png" class="img-responsive" alt="">
+                    <br><p>Carl Vondrick</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Carl Vondrick
+                            </div>
+                            <div class="project-name">
+                                 Assistant Professor, Columbia University
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="" id="program">
+    
+      <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">TUTORIAL PROGRAM</h2>
+                <hr class="primary">
+                <div class="text-dark" style="font-size: 19px">
+                    TBD
+                    <!--October 27th Half day, PM Seoul, Korea - <a href="https://www.coexcenter.com/">COEX Convention Center <br><b></b></a><br>-->
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="row no-gutter">
+            <div class="col-lg col-lg-offset-0  align-center" style="display: flex; justify-content: center; font-size: 18px">
+                <table>
+                  <tbody>
+                    
+
+                    <tr>
+                        <td style="min-width: 70px"><b>Time</b></td>
+                        <td colspan="0" style="min-width: 170px"><b>Description</b></td>
+                        <td colspan="0" style=""><b>Speaker/Paper ID</b></td>
+                    </tr>
+                    <tr>
+                        <td>13:30</td>
+                        <td>Opening remark</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13:40</td>
+                        <td>Invited Speaker 1: </td>
+                        <td colspan="0"><a class="page-scroll" href="#S2">Juan Carlos Niebles</a></td>
+                    </tr>
+                    <tr>
+                        <td>14:10</td>
+                        <td>Invited Speaker 2:</td>
+                        <td><a class="page-scroll" href="#S1">Raquel Urtasun</a></td>
+                    </tr>
+                    <tr>
+                        <td>14:40</td>
+                        <td>Coffee and Posters</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15:25</td>
+                        <td>4 Oral Talks</td>
+                        <td colspan="2"><a class="page-scroll" href="#orals">23, 16, 8, 22</a></td>
+                    </tr>
+                    <tr>
+                        <td>16:15</td>
+                        <td>Invited Speaker 3:</td>
+                        <td colspan="2"><a class="page-scroll" href="#S3">Du Tran</a></td>
+                    </tr>
+                    <tr>
+                        <td>16:45</td>
+                        <td>Invited Speaker 4:</td>
+                        <td><a class="page-scroll" href="#S4">David Ross</a></td>
+                    </tr>
+                    <tr>
+                        <td>17:15</td>
+                        <td>3 Oral Talks: </td>
+                        <td><a class="page-scroll" href="#orals">7, 4, 9</a></td>
+                    </tr>
+                    <tr>
+                        <td>17:50</td>
+                        <td>Conclusion and Awards</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        -->
+        
+</section>
+
+
+
+
+
+
+<section class="bg-gray" id="organizers">
+      <div class="container text-center">
+      <div class="row">
+          <div class="call-to-action">
+              <h2>ORGANIZERS</h2>
+              <hr class="primary">
+          </div>
+      </div>
+      
+    
+      
+      		<div class="row no-gutter">
+                <div class="col-md-4" >
+                    <a href="http://mohsenfayyaz89.github.io" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/MohsenFayyaz.png" class="img-responsive" alt="">
+                        <br><p>Mohsen Fayyaz</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Mohsen Fayyaz
+                                </div>
+                                <div class="project-name">
+                                    PhD candidate at the University of Bonn
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.esat.kuleuven.be/psi/members/00098021" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/AliDiba.png" class="img-responsive" alt="">
+                        <br><p>Ali Diba</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Ali Diba
+                                </div>
+                                <div class="project-name">
+                                    PhD candidate at the KU-Leuven University
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+		                <a href="http://vivoutlaw.github.io/" target="_blank" class="portfolio-box">
+		                    <img src="img/portfolio/VivekSharma.png" class="img-responsive" alt="">
+		                    <br><p>Vivek Sharma</p>
+		                    <div class="portfolio-box-caption">
+		                        <div class="portfolio-box-caption-content">
+		                            <div class="project-category text-faded">
+		                                Vivek Sharma
+		                            </div>
+		                            <div class="project-name">
+		                                PhD candidate at the Karlsruhe Institute of Technology
+		                            </div>
+		                        </div>
+		                    </div>
+		                </a>
+		        </div>
+		        
+        	</div>
+        
+        	
+        <div class="row no-gutter">
+            <div class="col-md-3">
+                <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank" class="portfolio-box">
+                    <img src="img/portfolio/LucVanGool.png" class="img-responsive" alt="">
+		    		<br><p>Luc Van Gool</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Luc Van Gool
+                            </div>
+                            <div class="project-name">
+                                Full Professor for Computer Vision at both the KULeuven  and  the  ETH  Zurich
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="http://gall.cv-uni-bonn.de/" target="_blank" class="portfolio-box">
+                    <img src="img/portfolio/JuergenGall.png" class="img-responsive" alt="">
+                    <br><p>Juergen Gall</p>
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                Juergen Gall
+                            </div>
+                            <div class="project-name">
+                                Full Professor and Head of the Computer Vision Group at the University of Bonn
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+		   <div class="col-md-3">
+	                <a href="https://cvhci.anthropomatik.kit.edu/people_596.php" target="_blank" class="portfolio-box">
+	                    <img src="img/portfolio/RainerStiefelhagen.png" class="img-responsive" alt="">
+	                    <br><p>Rainer Stiefelhagen</p>
+	                    <div class="portfolio-box-caption">
+	                        <div class="portfolio-box-caption-content">
+	                            <div class="project-category text-faded">
+	                                Rainer Stiefelhagen
+	                            </div>
+	                            <div class="project-name">
+	                                Full Professor at the Karlsruhe Institute of Technology (KIT)
+	                            </div>
+	                        </div>
+	                    </div>
+	                </a>
+	        </div>
+	        <div class="col-md-3">
+	                <a href="https://research.fb.com/people/paluri-manohar/" target="_blank" class="portfolio-box">
+	                    <img src="img/portfolio/ManoharPaluri.png" class="img-responsive" alt="">
+	                    <br><p>Manohar Paluri</p>
+	                    <div class="portfolio-box-caption">
+	                        <div class="portfolio-box-caption-content">
+	                            <div class="project-category text-faded">
+	                                Manohar Paluri
+	                            </div>
+	                            <div class="project-name">
+	                                Director in Facebook AI Research
+	                            </div>
+	                        </div>
+	                    </div>
+	                </a>
+	        </div>
+        </div>
+        
+    </div>
+
+
+</section>
+
+
+<section class="" id="contact">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">CONTACT</h2>
+                <hr class="primary">
+                
+            </div>
+        </div>
+        <div class="row">
+	        <div class="col-lg-2 col-lg-offset-2 text-center">
+	            <a href="https://twitter.com/LSHVU" target="_blank">
+	                <i class="fab fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+	                <p>@LSHVU</p>
+	            </a>
+	        </div>
+	        <div class="col-lg-2 col-lg-offset-1 text-center">
+	            <a href="mailto:fayyaz@iai.uni-bonn.de">
+	                <i class="fas fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                	<p>fayyaz@iai.uni-bonn.de</p>
+	            </a>
+	        </div>
+	        <div class="col-lg-2 col-lg-offset-1 text-center">
+	            <a href="https://github.com/holistic-video-understanding" target="_blank">
+	            <i class="fab fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+	                <p>holistic-video-understanding</p>
+	            </a>
+	        </div>
+
+    	</div>
+    </div>
+</section>
+  <!-- jQuery -->
+<script src="../js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.fittext.js"></script>
+<script src="../js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../js/creative.js"></script>
+
+</body>
+
+</html>
