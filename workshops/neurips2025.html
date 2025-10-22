@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Seventh International Workshop on Large Scale Holistic Video Understanding</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../fontawesome/css/all.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        window.heap = window.heap || [], heap.load = function (e, t) { window.heap.appid = e, window.heap.config = t = t || {}; var r = t.forceSSL || "https:" === document.location.protocol, a = document.createElement("script"); a.type = "text/javascript", a.async = !0, a.src = (r ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap-" + e + ".js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(a, n); for (var o = function (e) { return function () { heap.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "resetIdentity", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++)heap[p[c]] = o(p[c]) };
+        heap.load("1625312160");
+    </script>
+
+</head>
+
+
+<body id="page-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">HVU</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#speakers">Speakers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#program">Workshop Program</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#call-for-paper">Call for Paper</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#organizers">Organizers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header style="background-image:url('https://media.neurips.cc/Conferences/NeurIPS2025/img/neurips_2025_hero.jpg')">
+        <div class="header-content" style="color:white; background-color: rgba(0, 0, 0, 0.4);">
+            <div class="header-content-inner">
+
+                <h1>7th International Workshop on Large Scale Holistic Video Understanding: Toward Video Foundation
+                    Models</h1>
+                <hr>
+
+                <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
+                <a href="https://neurips.cc/virtual/2025/workshop/127828" target="_blank">
+                    <h2">In Conjunction with NeuRIPS 2025</h2>
+                        <!-- <img src="https://media.icml.cc/Conferences/CVPR2023/img/cvpr_banner_homepage.svg" class="img-logo" alt=""> -->
+                </a>
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                    <h6>Header Image: Gobierno CDMX, CC0, via Wikimedia Commons</h6>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="text-dark" id="about">
+        <div class="container">
+            <div class="row" style="padding-bottom: 50px">
+                <div class="col-md-6">
+                    <p>Holistic Video Understanding is a joint project of the KU Leuven, University of Bonn, KIT, ETH,
+                        and the <a href="../index.html#team" target="_blank">HVU team</a>.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+
+                        <div class="col-md-4 text-center">
+                            <img src="../img/portfolio/Bonn.png" class="img-logo" alt="">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="https://www.zukunftskongress-logistik.de/wp-content/uploads/lamarr-logo-2023.png"
+                                class="img-logo" alt="">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="../img/portfolio/KULeuven.png" class="img-logo" alt="">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="../img/portfolio/ETH.png" class="img-logo" alt="">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="../img/portfolio/KIT.svg" class="img-logo" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
+                <div class="col-md-6 text-center">
+                    <h2 class="section-heading">WHAT IS OUR GOAL?</h2>
+                    <hr class="light">
+                    <p class="text-dark" align="justify">This workshop aims to advance the field of video understanding
+                        by fostering discussions around holistic and generalist video foundation models. Building upon
+                        the Holistic Video Understanding (HVU) initiative and dataset introduced in 2019, we have
+                        successfully organized eight HVU workshops and tutorials at top-tier venues such as CVPR and
+                        ICCV, uniting researchers, practitioners, and students from around the world. These efforts have
+                        played a central role in moving the community beyond narrow action recognition tasks toward
+                        multi-faceted, semantic, and generalist video understanding.With the emergence of large-scale
+                        foundation models and video large language models (Video-LLMs), the landscape of video
+                        understanding is rapidly evolving. These models enable unified reasoning across spatial,
+                        temporal, and multimodal dimensions, yet introduce new challenges in scalability, efficiency,
+                        interpretability, and responsible deployment.The HVU Workshop 2025 will provide a platform to
+                        explore these frontiers, discussing topics such as multimodal representation learning,
+                        long-context reasoning, evaluation of general-purpose video systems, efficient adaptation and
+                        scaling laws, and the ethical and societal implications of video AI. Our goal is to bring
+                        together a diverse and inclusive community to define the next chapter of holistic, generalist,
+                        and responsible video understanding.<!--A few potential issues for the discussion are:--></p>
+                    <!--<a href="#" class="btn btn-default btn-xl">Coming Soon</a>-->
+                </div>
+                <div class="col-md-6 text-center">
+                    <h2 class="section-heading">ABOUT THE WORKSHOP</h2>
+                    <hr class="light">
+
+                    <p class="text-dark" align="justify">In recent years, the rise of large-scale foundation models and
+                        video large language models (Video-LLMs) has transformed how we approach video understanding.
+                        Instead of task-specific networks, we now see generalist models capable of reasoning over long
+                        temporal horizons, aligning multiple modalities (vision, language, and audio), and adapting to a
+                        wide range of downstream tasks. These developments open new opportunities but also introduce
+                        challenges in scalability, efficiency, evaluation, and responsible deployment.
+                        In this edition of the HVU Workshop, we aim to bring together researchers and practitioners to
+                        discuss the advances and open questions in this new era of Video Foundation Models. Building on
+                        the legacy of holistic video understanding, this workshop focuses on unified architectures,
+                        training methodologies, and evaluation paradigms for generalist video models.</p>
+                    <!--<a href="#" class="btn btn-default btn-xl">Coming Soon</a>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">TOPICS</h2>
+                    <hr class="light">
+                    <ul class="text-dark" style="font-size: 20px" align="left">
+                        <li>Foundation models for video understanding and reasoning</li>
+                        <li>Multimodal and temporal alignment in video-language models</li>
+                        <li>Scaling laws, architectural design, and training strategies for video LLMs</li>
+                        <li>Evaluation and benchmarking of general-purpose video models</li>
+                        <li>Long-context modeling and memory mechanisms for video sequences</li>
+                        <li>Efficient adaptation and transfer learning in large-scale video models</li>
+                        <li>Synthetic data generation and curation for video foundation models</li>
+                        <li>Societal, ethical, and safety implications of video LLMs</li>
+                        <li>Responsible deployment and bias evaluation in multimodal models</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray" id="speakers">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">SPEAKERS</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+
+
+            <!-- 
+            <div class="row no-gutter">
+
+                <div class="col-md-4" id="S1">
+                    <a href="https://dbolya.github.io/" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/DanielBolya.png" class="img-responsive" alt="">
+                        <br>
+                        <p>Daniel Bolya</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Christoph Feichtenhofer
+                                </div>
+                                <div class="project-name">
+                                    Research Scientist at FAIR, Meta
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4" style="align-content: right;" id="S2">
+                    <a href="https://www.umariqbal.info/" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/UmarIqbal.png" class="img-responsive" alt="">
+                        <br>
+                        <p>Umar Iqbal</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Umar Iqbal
+                                </div>
+                                <div class="project-name">
+                                    Senior Research Manager, Digital Human AI Research (DAIR), NVDIA
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4" style="align-content: right;" id="S3">
+                    <a href="https://gulvarol.github.io/" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/GulVarol.png" class="img-responsive" alt="">
+                        <br>
+                        <p>Gül Varol</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Gül Varol
+                                </div>
+                                <div class="project-name">
+                                    Permanent researcher (~Assoc. Prof.) in the IMAGINE group at École des Ponts
+                                    ParisTech/ ELLIS Scholar/ Guest Scientist at MPI
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4" id="S4">
+                    <a href="https://dimadamen.github.io/" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/DimaDamen.png" class="img-responsive" alt="">
+                        <br>
+                        <p>Dima Damen</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Dima Damen
+                                </div>
+                                <div class="project-name">
+                                    Lead of Machine Learning and Computer Vision Group, University of Bristol / Research
+                                    Scientist at Google DeepMind
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+            </div>
+            -->
+
+            <div class="row no-gutter">
+                <div class="col-lg-12 text-center">
+                    <h3>TBA</h3>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!--
+<section class="" id="awards">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12 text-center">
+
+                <h2 class="section-heading">AWARDS</h2>
+                <i class="fas fa-award fa-4x wow bounceIn" data-wow-delay=".1s"></i>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center" style="display: flex; justify-content: center; font-size: 18px">
+                <div>
+                    <h3 class="section-heading">Best Paper Award</h3>
+                    <hr class="primary">
+                    <div style="justify-content: left;">
+                        <b >TBA</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center" style="display: flex; justify-content: center; font-size: 18px">
+                <div>
+                    <h3 class="section-heading">Best Poster Award</h3>
+                    <hr class="primary">
+                    <b>TBA</b>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center" style="display: flex; justify-content: center; font-size: 16px; padding-top: 40px">
+                TBA
+            </div>
+        </div>
+    </div>
+    
+</section>-->
+
+    <section class="" id="program">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">WORKSHOP PROGRAM</h2>
+                    <hr class="primary">
+                    <div class="text-dark" style="font-size: 19px">
+                        <!--TBA <br><b></b></a>-->
+                        <b>Room: Don Alberto 3</b><br>
+                        Monday 1 December 2025 (In-person)
+                        <!--<a href="https://youtu.be/OCcBfVyQ1Lk"> Recorded Video on YouTube: https://youtu.be/OCcBfVyQ1Lk </a>-->
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row no-gutter">
+                <div class="col-lg col-lg-offset-0  align-center"
+                    style="display: flex; justify-content: center; font-size: 18px">
+
+                    <table>
+                        <tbody>
+
+
+                            <tr>
+                                <td style="min-width: 70px"><b>&nbsp;&nbsp; local Time</b></td>
+                                <td colspan="0" style="min-width: 170px"><b>&nbsp;&nbsp; Description</b></td>
+                                <td colspan="0" style="min-width: 170px"><b>&nbsp;&nbsp; Speaker</b></td>
+                                <td colspan="0" style=""><b>&nbsp;&nbsp; </b></td>
+                            </tr>
+                            <tr>
+                                <td>08:50</td>
+                                <td>&nbsp;&nbsp; Opening Remarks</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <!-- 
+                            <tr>
+                                <td>08:55</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 1:</td>
+                                <td colspan="0"><a class="page-scroll" href="#S1">&nbsp;&nbsp; Daniel Bolya</a></td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>09:35</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 2:</td>
+                                <td colspan="0"><a class="page-scroll" href="#S2">&nbsp;&nbsp; Umar Iqbal</a></td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>10:15</td>
+                                <td>&nbsp;&nbsp; Coffee Break</td>
+                                <td colspan="0"><a class="page-scroll" href="#S3">&nbsp;&nbsp; </a></td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 3:</td>
+                                <td colspan="0"><a class="page-scroll" href="#S3">&nbsp;&nbsp; Gül Varol</a></td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>11:15</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 4:</td>
+                                <td colspan="0"><a class="page-scroll" href="#S4">&nbsp;&nbsp; Dima Damen</a></td>
+                                <td colspan="0"></td>
+                            </tr>
+                            -->
+
+                            <tr>
+                                <td>09:00</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 1:</td>
+                                <td colspan="0">&nbsp;&nbsp; TBA</td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>09:30</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 2:</td>
+                                <td colspan="0">&nbsp;&nbsp; TBA</td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>10:00</td>
+                                <td>&nbsp;&nbsp; Poster Session and Coffee Break</td>
+                                <td colspan="0"></td>
+                                <td colspan="0"></td>
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 3:</td>
+                                <td colspan="0">&nbsp;&nbsp; TBA</td>
+                                <td colspan="0"></td>
+                            </tr>
+
+                            <tr>
+                                <td>11:00</td>
+                                <td>&nbsp;&nbsp; Invited Speaker 4:</td>
+                                <td colspan="0">&nbsp;&nbsp; TBA</td>
+                                <td colspan="0"></td>
+                            </tr>
+
+                            <tr>
+                                <td>11:30</td>
+                                <td>&nbsp;&nbsp; Contributed Oral Presentations</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12:00</td>
+                                <td>&nbsp;&nbsp; Panel Discussion</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12:45</td>
+                                <td>&nbsp;&nbsp; Closing Remarks</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+            <div class="row" id="papers">
+                <div class="col-lg col-lg-offset-0 text-center"
+                    style="padding-left: 15px; padding-right: 15px; padding-top: 30px">
+                    <!--
+                <h2 class="section-heading">Papers</h2>
+                <hr class="primary">
+                <p class="text-dark" align="justify" style="font-size: 14px">
+1. <b>From Video Generation to Embodied AI</b>; Ruoshi Liu, Carl Vondrick<br>
+2. <b>MoReVQA: Exploring Modular Reasoning Models for Video Question Answering</b>; Juhong Min · Shyamal Buch · Arsha Nagrani · Minsu Cho · Cordelia Schmid<br>
+3. <b>Learning from One Continuous Video Stream</b>; Joao Carreira · Michael King · Viorica Patraucean · Dilara Gokay · Catalin Ionescu · Yi Yang · Daniel Zoran · Joseph Heyward · Carl Doersch · Yusuf Aytar · Dima Damen · Andrew Zisserman<br>
+4. <b>PEEKABOO: Interactive Video Generation via Masked-Diffusion</b>; Yash Jain · Anshul Nasery · Vibhav Vineet · Harkirat Behl<br>
+5. <b>Separating the "Chirp" from the "Chat": Self-supervised Visual Grounding of Sound and Language</b>; Mark Hamilton · Andrew Zisserman · John Hershey · William Freeman<br>
+6. <b>MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding</b>; Bo He, Hengduo Li, Young Kyun Jang, Menglin Jia, Xuefei Cao, Ashish Shah, Abhinav Shrivastava, Ser-Nam Lim<br>
+</p>
+               
+            </div> 
+        </div> 
+             -->
+
+                </div>
+    </section>
+
+
+
+    <section class="bg-gray" id="call-for-paper">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg col-lg-offset-0 text-center" style="padding-left: 15px; padding-right: 15px">
+                    <h2 class="section-heading">CALL FOR PAPER</h2>
+                    <hr class="primary">
+                    <p class="text-dark" align="justify">Prospective authors will be invited to submit a regular paper
+                        of previously unpublished work (NeuRIPS 2025 paper format) or an extended abstract of a
+                        published work.
+                        The review process will be double blind. All the submissions will be peer-reviewed by the
+                        international program committee. Accepted papers will be presented as posters or contributed
+                        talks. Accepted extended abstracts will also be presented at the poster session or
+                        presentations.</p>
+
+                </div>
+            </div>
+
+            <div class="row align-center">
+                <div class="col-md-3 text-center">
+                    <div class="service-box">
+                        <a class="page-scroll" href="#submission">
+                            <i class="fas fa-paper-plane fa-4x wow bounceIn" data-wow-delay=".1s"></i>
+                            <h4>Paper Submission Starts*</h4>
+                            <h4>TBA</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="service-box">
+                        <a href="https://cmt3.research.microsoft.com/LSHVU2023" target="_blank">
+                            <i class="fas fa-flag fa-4x wow bounceIn" data-wow-delay=".1s"></i>
+                            <h4>Paper Submission Deadline</h4>
+                            <h4>December 30</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="service-box">
+                        <a href="https://cmt3.research.microsoft.com/LSHVU2023" target="_blank">
+                            <i class="fas fa-check fa-4x wow bounceIn" data-wow-delay=".1s"></i>
+                            <h4>Notification of Acceptance</h4>
+                            <h4>November 5th</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="service-box">
+                        <a href="https://cmt3.research.microsoft.com/LSHVU2023" target="_blank">
+                            <i class="fas fa-camera fa-4x wow bounceIn" data-wow-delay=".1s"></i>
+                            <h4>Camera Ready Submission</h4>
+                            <h4>TBA</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-center">
+
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="col-lg col-lg-offset-0 text-center"
+                        style="padding-left: 15px; padding-right: 15px; padding-top: 35px">
+                        <div class="service-box">
+                            <i class="fas fa-users fa-4x wow bounceIn" data-wow-delay=".1s"></i>
+                            <h4>Workshop</h4>
+                            <h4>December 1st</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--</div>-->
+            <div class="row">
+                <div class="col-lg col-lg-offset-0 text-center"
+                    style="padding-left: 15px; padding-right: 15px; padding-top: 35px" id="submission">
+                    <h2 class="section-heading">Submission</h2>
+                    <hr class="primary">
+                    <p class="text-dark" align="justify">
+                        *You can submit papers in two different formats:
+                    <ol class="text-dark" align="justify">
+                        <li>We will accept papers that have not been published elsewhere or have been recently published
+                            elsewhere including NeuRIPS 2025. Accepted papers will appear in NeuRIPS proceedings. For
+                            submissions of papers, we will follow the <b>Double Blind</b> review process, in that
+                            authors do not know the names of the reviewers of their papers, and reviewers do not know
+                            the names of the authors. The authors must follow the NeuRIPS 2025 submission policy. Papers
+                            are limited to eight pages, including figures and tables, in the NeuRIPS style. Additional
+                            pages containing only cited references are allowed. Supplementary materials and appendices
+                            are allowed but will be considered optional for reviewers. Please refer to the NeuRIPS 2025
+                            website for more information. Papers that are not properly anonymized, or do not use the
+                            template, or have more than eight pages (excluding references) will be rejected without
+                            review. The accepted papers must follow the NeuRIPS 2025 camera-ready format as per
+                            the instructions are given here but limit your paper to 4-8 pages excluding references.</li>
+
+                        <li>For submissions of papers that have been published or accepted for publication in a recent
+                            venue, we will follow the <b>Single Blind</b> review process, in that authors do not know
+                            the names of the reviewers of their papers, but reviewers do know the names of the authors.
+                            Authors MUST indicate, in the footnote section on the first page of their submission, which
+                            venue their papers have been published or will be published. For example, if the paper will
+                            appear at NeuRIPS 2025, the submission should include a footnote on the first page showing
+                            "To appear at NeuRIPS 2025".</li>
+
+                        <!--<li>Authors can also submit a maximum of 4-8 pages (excluding references) which will be peer-reviewed. We will follow the <b>Single Blind</b> review process. However, they will not be included in the proceedings. Accepted papers will be presented as posters or contributed talks. Authors of accepted papers will be asked to post their submissions on arXiv. The workshop website will provide links to the accepted papers on arXiv. Accepted papers will be considered non-archival, and may be submitted elsewhere (modified or not). Therefore, the deadline for paper submission is <b>March 31st</b>. Notification to the authors by <b>April 14th</b>.</li>-->
+
+                    </ol>
+
+                    </p>
+                    <a href="" target="_blank" class="btn btn-default btn-xl">Submit Your Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="" id="organizers">
+        <div class="container text-center">
+            <div class="row">
+                <div class="call-to-action">
+                    <h2>ORGANIZERS</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+            <div class="row no-gutter">
+                <div class="col-md-3">
+                    <a href="http://mohsenfayyaz89.github.io" target="_blank" class="portfolio-box">
+                        <img src="img/portfolio/MohsenFayyaz.png" class="img-responsive" alt="">
+                        <br>
+                        <p>Mohsen Fayyaz</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Mohsen Fayyaz
+                                </div>
+                                <div class="project-name">
+                                    Senior Researcher at Microsoft
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="http://vivoutlaw.github.io/" target="_blank" class="portfolio-box">
+                        <img src="../img/portfolio/VivekSharma.png" class="img-responsive" alt="">
+                        <br>
+                        <p>Vivek Sharma</p>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Vivek Sharma
+                                </div>
+                                <div class="project-name">
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row no-gutter">
+                    <div class="col-md-3">
+                        <a href="https://anuragarnab.github.io/" target="_blank" class="portfolio-box">
+                            <img src="img/portfolio/AnuragArnab.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Anurag Arnab</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Anurag Arnab
+                                    </div>
+                                    <div class="project-name">
+                                        Research Scientist at DeepMind
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-3">
+                        <a href="https://www.esat.kuleuven.be/psi/members/00098021" target="_blank"
+                            class="portfolio-box">
+                            <img src="img/portfolio/AliDiba.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Ali Diba</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Ali Diba
+                                    </div>
+                                    <div class="project-name">
+                                        PhD candidate at the KU-Leuven University
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="row no-gutter">
+                    <div class="col-md-3">
+                        <a href="https://cs.stanford.edu/~shyamal/" target="_blank" class="portfolio-box">
+                            <img src="img/portfolio/ShyamalBuch.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Shyamal Buch</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Shyamal Buch
+                                    </div>
+                                    <div class="project-name">
+                                        Research Scientist at Google DeepMind
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://www.vision.ee.ethz.ch/en/members/get_member.cgi?id=1" target="_blank"
+                            class="portfolio-box">
+                            <img src="img/portfolio/LucVanGool.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Luc Van Gool</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Luc Van Gool
+                                    </div>
+                                    <div class="project-name">
+                                        Full Professor for Computer Vision at both the KULeuven and the ETH Zurich
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="http://gall.cv-uni-bonn.de/" target="_blank" class="portfolio-box">
+                            <img src="img/portfolio/JuergenGall.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Juergen Gall</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Juergen Gall
+                                    </div>
+                                    <div class="project-name">
+                                        Full Professor and Head of the Computer Vision Group at the University of Bonn
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="http://www.cs.toronto.edu/~dross/" target="_blank" class="portfolio-box">
+                            <img src="img/portfolio/DavidRoss.png" class="img-responsive" alt="">
+                            <br>
+                            <p>David Ross</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        David Ross
+                                    </div>
+                                    <div class="project-name">
+                                        Research Manager at Google Deepmind
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://scholar.google.com/citations?user=IUZ-7_cAAAAJ" target="_blank"
+                            class="portfolio-box">
+                            <img src="img/portfolio/JoaoCarreira.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Joao Carreira</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Joao Carreira
+                                    </div>
+                                    <div class="project-name">
+                                        Senior Staff Research Scientist at Google DeepMind
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://web.stanford.edu/~eadeli/" target="_blank" class="portfolio-box">
+                            <img src="../workshops/img/portfolio/EhsanAdeli.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Ehsan Adeli</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Ehsan Adeli
+                                    </div>
+                                    <div class="project-name">
+                                        Faculty at Computational Neurosience Lab and affiliated with Stanford AI Lab and
+                                        Stanford Vision Lab
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="https://research.fb.com/people/paluri-manohar/" target="_blank" class="portfolio-box">
+                            <img src="img/portfolio/ManoharPaluri.png" class="img-responsive" alt="">
+                            <br>
+                            <p>Manohar Paluri</p>
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                        Manohar Paluri
+                                    </div>
+                                    <div class="project-name">
+                                        Research Manager at Google DeepMind
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+    </section>
+
+
+
+
+    <section class="bg-gray" id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">CONTACT</h2>
+                    <hr class="primary">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-2 text-center">
+                    <a href="https://twitter.com/LSHVU" target="_blank">
+                        <i class="fab fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                        <p>@LSHVU</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-lg-offset-1 text-center">
+                    <a href="mailto:fayyaz@iai.uni-bonn.de">
+                        <i class="fas fa-envelope fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                        <p>fayyaz@iai.uni-bonn.de</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-lg-offset-1 text-center">
+                    <a href="https://github.com/holistic-video-understanding" target="_blank">
+                        <i class="fab fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                        <p>holistic-video-understanding</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../js/jquery.easing.min.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/creative.js"></script>
+
+</body>
+
+</html>
